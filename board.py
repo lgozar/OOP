@@ -11,8 +11,3 @@ class Board:
         #setting the mode
         self.GPIO.setmode(self.GPIO.BCM)
         self.GPIO.setwarnings(False)
-        
-if __name__ == "__main__"
-
-    rpi = Board()
-    rpi.GPIO.cleanup
