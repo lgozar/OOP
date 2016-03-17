@@ -7,7 +7,7 @@ class Board:
         self.GPIO = RPi.GPIO
         self.setup()
         
-    def setup():
+    def setup(self):
         #setting the mode
         self.GPIO.setmode(self.GPIO.BCM)
         self.GPIO.setwarnings(False)
