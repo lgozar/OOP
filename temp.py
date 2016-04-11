@@ -73,7 +73,7 @@ try:
             print('Error')
         time.sleep(1)
 
-except KeyboardInterrupts:
+except KeyboardInterrupt:
     led_off()
     time.sleep(3)
 
