@@ -56,6 +56,8 @@ def read_temp():
 '''
 board = Board()
 
+pins = [22]
+
 setup_pins()
 
 try:
