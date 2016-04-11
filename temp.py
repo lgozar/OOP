@@ -56,7 +56,7 @@ def read_temp():
 '''
 board = Board()
 
-pins = [22]
+current = [22]
 
 setup_pins()
 
