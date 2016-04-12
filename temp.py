@@ -52,10 +52,9 @@ def read_temp():
         c = float(string) / 1000.0
         return c
 
+''' main '''
+
 board = Board()
-
-current = [22]
-
 setup_pins()
 
 try:
