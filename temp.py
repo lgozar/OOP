@@ -9,6 +9,7 @@ os.system('modprobe w1-therm')
 sensor = '/sys/bus/w1/devices/28-021565382dff/w1_slave'
 
 pins = [16, 20, 21]
+
 set_temp = 22
 
 def setup_pins():
@@ -16,9 +17,11 @@ def setup_pins():
         GPIO.setup(pin, GPIO.OUT)
 
 def set_led(colour):
+    
     r = 16
     g = 20
     b = 21
+    
     if colour == 'red':
         GPIO.output(r, GPIO.HIGH)
     elif colour == 'green':
@@ -47,13 +50,8 @@ def read_temp():
     if output != -1:
         string = lines[1].strip()[output+2:]
         c = float(string) / 1000.0
-        f = c * 9.0 / 5.0 + 32.0
-        return c, f
+        return c
 
-''' def setup_interrupts(pins):
-    for pin in pins:
-        GPIO.add_event_detect(pin, GPIO.FALLING, callback=test_button_up, bouncetime=300)
-'''
 board = Board()
 
 current = [22]
@@ -62,20 +60,22 @@ setup_pins()
 
 try:
     while True:
-        c, f = read_temp()
+        c = read_temp()
         if c < set_temp:
             led_off()
             set_led('red')
+            print(c)
         elif c >= set_temp:
             led_off()
             set_led('green')
+            print(c)
         else:
             print('Error')
         time.sleep(1)
 
 except KeyboardInterrupt:
     led_off()
-    time.sleep(3)
+    time.sleep(1)
 
 finally:
     GPIO.cleanup()
