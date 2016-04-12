@@ -9,6 +9,7 @@ os.system('modprobe w1-therm')
 sensor = '/sys/bus/w1/devices/28-021565382dff/w1_slave'
 
 pins = [17, 18, 27]
+
 set_temp = 22
 
 def setup_pins():
@@ -56,8 +57,6 @@ def read_temp():
 '''
 board = Board()
 
-pins = [22]
-
 setup_pins()
 
 try:
@@ -73,7 +72,7 @@ try:
             print('Error')
         time.sleep(1)
 
-except KeyboardInterrupts:
+except KeyboardInterrupt:
     led_off()
     time.sleep(3)
 
