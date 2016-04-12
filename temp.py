@@ -8,8 +8,12 @@ os.system('modprobe w1-therm')
 
 sensor = '/sys/bus/w1/devices/28-021565382dff/w1_slave'
 
+<<<<<<< HEAD
 pins = [17, 18, 27]
 
+=======
+pins = [16, 20, 21]
+>>>>>>> c63d8cbf52ab9357c93be0a782819cfe551307bb
 set_temp = 22
 
 def setup_pins():
@@ -17,9 +21,9 @@ def setup_pins():
         GPIO.setup(pin, GPIO.OUT)
 
 def set_led(colour):
-    r = 17
-    g = 18
-    b = 27
+    r = 16
+    g = 20
+    b = 21
     if colour == 'red':
         GPIO.output(r, GPIO.HIGH)
     elif colour == 'green':
@@ -57,6 +61,11 @@ def read_temp():
 '''
 board = Board()
 
+<<<<<<< HEAD
+=======
+current = [22]
+
+>>>>>>> c63d8cbf52ab9357c93be0a782819cfe551307bb
 setup_pins()
 
 try:
