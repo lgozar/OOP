@@ -17,19 +17,15 @@ def setup_pins():
         GPIO.setup(pin, GPIO.OUT)
 
 def set_led(colour):
-<<<<<<< HEAD
 
     r = 16
     g = 20
     b = 21
-
-=======
     
     r = 16
     g = 20
     b = 21
     
->>>>>>> 41aec0459ace379a429471054d26ef6854261f3d
     if colour == 'red':
         GPIO.output(r, GPIO.HIGH)
     elif colour == 'green':
@@ -60,11 +56,7 @@ def read_temp():
         c = float(string) / 1000.0
         return c
 
-<<<<<<< HEAD
 '''main code'''
-=======
-''' main '''
->>>>>>> 41aec0459ace379a429471054d26ef6854261f3d
 
 board = Board()
 setup_pins()
