@@ -29,4 +29,4 @@ if __name__ == "__main__":
             print('Button Pressed')
             button.pressed = False
             time.sleep(0.2)
-       rpi.GPIO.cleanup()
+    rpi.GPIO.cleanup()
