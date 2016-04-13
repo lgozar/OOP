@@ -25,7 +25,8 @@ if __name__ == "__main__":
     button = Button(rpi, 24)
     
     while True:
-    if button.pressed:
-        print('Button Pressed')
-        button.pressed = False
-        time.sleep(0.2) 
+        if button.pressed:
+            print('Button Pressed')
+            button.pressed = False
+            time.sleep(0.2)
+       rpi.GPIO.cleanup()
