@@ -16,7 +16,7 @@ class Button:
     def pressed(self, value):
         self.__pressed = value
         
-    def button(self)
+    def button(self):
         self.__board.GPIO.setup(self.pin, self.__board.GPIO.IN, pull_up_down = self.__board.GPIO.PUD_UP)
         
 if __name__ == "__main__":
