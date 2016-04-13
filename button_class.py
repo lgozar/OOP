@@ -2,8 +2,8 @@ from board import Board
 import time
 
 class Button:
-    def __init__(self, gpio.object, pin):
-        self.__board = gpio.object
+    def __init__(self, gpio_object, pin):
+        self.__board = gpio_object
         self.pin = pin
         self.button()
         self.__pressed = False
