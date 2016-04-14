@@ -35,7 +35,7 @@ class Button:
 if __name__ == "__main__":
     from board import Board
     rpi = Board()
-    button = Button(rpi, 22)
+    button = Button(rpi, 24)
     
     while True: 
         if button.pressed:
