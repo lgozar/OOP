@@ -15,5 +15,6 @@ while True:
             sleep(0.1)
             rgb.turnBlue_on()
             sleep(0.1)
+        elif button.pressed:
             rgb.turnRGB_off()
 rpi.GPIO.cleanup()
