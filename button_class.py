@@ -17,16 +17,21 @@ class Button:
     def pressed(self, value):
         self.__pressed = value
 
-    def __button(self):
-        self.__board.GPIO.setup(self.pin, self.__board.GPIO.IN, pull_up_down = self.__board.GPIO.PUD_UP)
+    def __button(self, resistor = False):
+        if not resister:
+            self.__board.GPIO.setup(self.pin, self.__board.GPIO.IN)
+        elif resister:
+            self.__board.GPIO.set(self.pin, self.__board.GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
+        else:
+            print('Error in setting up the resistor')
         
     def __my_callback(self, channel):
         self.pressed = True
   
 rpi = Board()
+button = Button(rpi, 24)
 
 while True:
-    button = Button(rpi, 24)
     if button.pressed:
         print('Button Pressed')
         button.pressed = False
