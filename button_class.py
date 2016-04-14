@@ -1,5 +1,5 @@
 from board import Board
-import time
+from time import sleep
 
 class Button:
     
@@ -32,5 +32,4 @@ if __name__ == "__main__":
         if button.pressed:
             print('Button Pressed')
             button.pressed = False
-        time.sleep(0.2)
     rpi.GPIO.cleanup()
