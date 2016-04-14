@@ -27,6 +27,8 @@ class Button:
         
     def __my_callback(self, channel):
         self.pressed = True
+        
+if __name__ == "__main__":
   
 rpi = Board()
 button = Button(rpi, 24)
