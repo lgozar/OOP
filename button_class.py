@@ -18,7 +18,7 @@ class Button:
         self.__pressed = value
 
     def __button(self):
-        self.__button.GPIO.setup(self.__pin, self.__board.GPIO.IN, pull_up_down=GPIO.PUD_UP)
+        self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN, pull_up_down=GPIO.PUD_UP)
         
     def __my_callback(self, channel):
         self.pressed = True
