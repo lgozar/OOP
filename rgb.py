@@ -43,4 +43,4 @@ if __name__ == "__main__":
     sleep(0.1)
     rgb.turnBlue_on()
     sleep(0.1)
-    led.turnRGB_off()
+    rgb.turnRGB_off()
