@@ -5,7 +5,7 @@ class Button:
     
     def __init__(self, gpio_object, pin):
         self.__board = gpio_object
-        self.pin = pin
+        self.__pin = pin
         self.__button()
         self.__pressed = False
         
@@ -18,7 +18,7 @@ class Button:
         self.__pressed = value
 
     def __button(self):
-        self.__button.GPIO.setup(self.pin, self.__board.GPIO.IN, pull_up_down=GPIO.PUD_UP)
+        self.__button.GPIO.setup(self.__pin, self.__board.GPIO.IN, pull_up_down=GPIO.PUD_UP)
         
     def __my_callback(self, channel):
         self.pressed = True
