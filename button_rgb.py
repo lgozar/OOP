@@ -4,9 +4,9 @@ from button_class import Button
 
 rpi = Board()
 button = Button(rpi, 24)
+rgb = RGB(rpi, 16, 20, 21)
 
 while True:
         if button.pressed:
-            print('Button Pressed')
-            button.pressed = False
+            rgb.turnRed_on()
 rpi.GPIO.cleanup()
