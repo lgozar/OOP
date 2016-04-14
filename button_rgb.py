@@ -1,6 +1,7 @@
 from board import Board
 from rgb_class import RGB
 from button_class import Button
+from time import sleep
 
 rpi = Board()
 button = Button(rpi, 24)
