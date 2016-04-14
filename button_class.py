@@ -30,12 +30,12 @@ class Button:
         
 if __name__ == "__main__":
   
-rpi = Board()
-button = Button(rpi, 24)
+    rpi = Board()
+    button = Button(rpi, 24)
 
-while True:
-    if button.pressed:
-        print('Button Pressed')
-        button.pressed = False
+    while True:
+        if button.pressed:
+            print('Button Pressed')
+            button.pressed = False
         time.sleep(0.2)
-rpi.GPIO.cleanup()
+    rpi.GPIO.cleanup()
