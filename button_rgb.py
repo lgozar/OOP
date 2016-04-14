@@ -15,5 +15,10 @@ while True:
         sleep(0.1)
         rgb.turnBlue_on()
         sleep(0.1)
-        rgb.turnRGB_off()
-rpi.GPIO.cleanup()
+        
+except KeyboardInterrupt:
+    rgb.turnRGB_off()
+    time.sleep(1)
+
+finally:
+    rpi.GPIO.cleanup()
