@@ -17,13 +17,8 @@ class Button:
     def pressed(self, value):
         self.__pressed = value
 
-    def __button(self, resistor = False):
-        if not resistor:
-            self.__board.GPIO.setup(self.pin, self.__board.GPIO.IN)
-        elif resistor:
-            self.__board.GPIO.set(self.pin, self.__board.GPIO.IN, pull_up_down = GPIO.PUD_DOWN)
-        else:
-            print('Error in setting up the resistor')
+    def __button(self):
+        self.__button.GPIO.setup(self.pin, self.__board.GPIO.IN, pull_up_down=GPIO.PUD_UP)
         
     def __my_callback(self, channel):
         self.pressed = True
