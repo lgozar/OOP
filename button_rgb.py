@@ -16,4 +16,4 @@ while True:
         rgb.turnBlue_on()
         sleep(0.1)
         rgb.turnRGB_off()
-rpi.GPIO.cleanup()
+        rpi.GPIO.cleanup()
