@@ -16,7 +16,7 @@ class LED:
     def turnLED_off(self):
         self.board.GPIO.output(self.pin, self.board.GPIO.LOW)
         
-if __name__ == "__main__"
+if __name__ == "__main__":
 
     rpi = Board()
     led = LED(rpi, pin)
