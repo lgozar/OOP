@@ -8,7 +8,7 @@ class RGB:
         self.green = g
         self.blue = b
         self.__outputs = [self.red, self.green, self.blue]
-        self.board = gpio
+        self.board = gpio_object
         
         self.setup_led()
         
