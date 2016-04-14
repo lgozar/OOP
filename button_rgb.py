@@ -7,14 +7,15 @@ rpi = Board()
 button = Button(rpi, 24)
 rgb = RGB(rpi, 16, 20, 21)
 
-while True:
-    if button.pressed:
-        rgb.turnRed_on()
-        sleep(0.1)
-        rgb.turnGreen_on()
-        sleep(0.1)
-        rgb.turnBlue_on()
-        sleep(0.1)
+try:
+    while True:
+        if button.pressed:
+            rgb.turnRed_on()
+            sleep(0.1)
+            rgb.turnGreen_on()
+            sleep(0.1)
+            rgb.turnBlue_on()
+            sleep(0.1)
         
 except KeyboardInterrupt:
     rgb.turnRGB_off()
