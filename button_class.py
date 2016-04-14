@@ -16,13 +16,16 @@ class Button:
     @pressed.setter
     def pressed(self, value):
         self.__pressed = value
+        
 
     def __button(self):
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN, pull_up_down = self.__board.GPIO.PUD_UP)
-        
+
+'''        
     def __my_callback(self, channel):
         self.pressed = True
-        
+''''
+
 if __name__ == "__main__":
   
     rpi = Board()
