@@ -14,12 +14,10 @@ try:
             rgb.turnRGB_off()
             button.pressed = False
             sleep(0.1)
-        elif button.pressed:
             rgb.turnGreen_on()
             rgb.turnRGB_off()
             button.pressed = False
             sleep(0.1)
-        elif button.pressed:
             rgb.turnBlue_on()
             rgb.turnRGB_off()
             button.pressed = False
