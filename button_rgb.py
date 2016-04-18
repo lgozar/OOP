@@ -21,7 +21,7 @@ try:
         
 except KeyboardInterrupt:
     rgb.turnRGB_off()
-    time.sleep(1)
+    sleep(1)
 
 finally:
     rpi.GPIO.cleanup()
