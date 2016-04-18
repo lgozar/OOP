@@ -16,6 +16,7 @@ try:
             sleep(0.1)
             rgb.turnBlue_on()
             sleep(0.1)
+            button.pressed = False
         
 except KeyboardInterrupt:
     rgb.turnRGB_off()
