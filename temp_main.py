@@ -17,10 +17,6 @@ def setup_pins():
         GPIO.setup(pin, GPIO.OUT)
 
 def set_led(colour):
-
-    r = 16
-    g = 20
-    b = 21
     
     r = 16
     g = 20
