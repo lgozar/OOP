@@ -11,13 +11,19 @@ try:
     while True:
         if button.pressed:
             rgb.turnRed_on()
-            sleep(0.1)
-            rgb.turnGreen_on()
-            sleep(0.1)
-            rgb.turnBlue_on()
-            sleep(0.1)
             rgb.turnRGB_off()
             button.pressed = False
+            sleep(0.1)
+        elif button.pressed:
+            rgb.turnGreen_on()
+            rgb.turnRGB_off()
+            button.pressed = False
+            sleep(0.1)
+        elif button.pressed:
+            rgb.turnBlue_on()
+            rgb.turnRGB_off()
+            button.pressed = False
+            sleep(0.1)
         
 except KeyboardInterrupt:
     rgb.turnRGB_off()
