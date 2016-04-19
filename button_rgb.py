@@ -27,7 +27,7 @@ def switch(colour):
 try:
     while True:
         if button.pressed:
-            switch(red)
+            rgb.turnRed_on()
             sleep(0.5)
             rgb.turnGreen_on()
             sleep(0.5)
