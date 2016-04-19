@@ -12,7 +12,10 @@ try:
         if button.pressed:
             rgb.turnRed_on()
             sleep(0.1)
-        else:
+            rgb.turnGreen_on()
+            sleep(0.1)
+            rgb.turnBlue_on()
+            sleep(0.1)
             rgb.turnRGB_off()
             button.pressed = False
         
