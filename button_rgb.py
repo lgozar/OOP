@@ -29,7 +29,8 @@ try:
         if button.pressed:
             switch('red')
             sleep(0.5)
-        if button.pressed:
+            button.pressed = False
+        elif button.pressed:
             switch('green')
             sleep(0.5)
             
