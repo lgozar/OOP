@@ -29,8 +29,10 @@ try:
         if button.pressed:
             switch('red')
             sleep(0.5)
-            rgb.turnGreen_on()
+        if button.pressed:
+            switch('green')
             sleep(0.5)
+            
             rgb.turnBlue_on()
             sleep(0.5)
             rgb.turnRGB_off()
