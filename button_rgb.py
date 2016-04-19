@@ -26,16 +26,16 @@ def switch(colour):
 
 try:
     while True:
-        if button.pressed:
+        if button.pressed == 1:
             switch('red')
             sleep(0.5)
-            button.pressed = False
-        elif button.pressed:
+        if button.pressed == 2:
             switch('green')
             sleep(0.5)
-            
+        if button.pressed == 3:
             rgb.turnBlue_on()
             sleep(0.5)
+            
             rgb.turnRGB_off()
             button.pressed = False
         
