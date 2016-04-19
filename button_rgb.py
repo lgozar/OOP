@@ -28,11 +28,8 @@ try:
     while True:
         if button.pressed:
             switch('red')
-            sleep(0.5)
             switch('green')
-            sleep(0.5)
             switch('blue')
-            sleep(0.5)
             rgb.turnRGB_off()
             button.pressed = False
         
