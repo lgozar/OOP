@@ -9,7 +9,7 @@ rgb = RGB(rpi, 16, 20, 21)
 
 try:
     while True:
-        if button.pressed:
+        if button.pressed == 0:
             rgb.turnRed_on()
             sleep(0.1)
             rgb.turnGreen_on()
