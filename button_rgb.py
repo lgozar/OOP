@@ -9,17 +9,11 @@ rgb = RGB(rpi, 16, 20, 21)
 
 try:
     while True:
-        if button.pressed == 1:
+        if button.pressed:
             rgb.turnRed_on()
             sleep(0.1)
-        else:
-            rgb.turnRGB_off()
-            
-        if button.pressed == 1:
             rgb.turnGreen_on()
             sleep(0.1)
-            rgb.turnRGB_off()
-        if button.pressed == 1:
             rgb.turnBlue_on()
             sleep(0.1)
             rgb.turnRGB_off()
