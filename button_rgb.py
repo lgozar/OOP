@@ -7,10 +7,27 @@ rpi = Board()
 button = Button(rpi, 24)
 rgb = RGB(rpi, 16, 20, 21)
 
+def switch(colour):
+    
+    if colour == 'red':
+        rgb.turnRed_on()
+        sleep(0.2)
+        rgb.turnRGB_off()
+    elif colour == 'green':
+        rgb.turnGreen_on()
+        sleep(0.2)
+        rgb.turnRGB_off()
+    elif colour == 'blue':
+        rgb.turnBlue_on()
+        sleep(0.2)
+        rgb.turnRGB_off()
+    else:
+        rgb.turnRGB_Off()
+
 try:
     while True:
         if button.pressed:
-            rgb.turnRed_on()
+            switch(red)
             sleep(0.5)
             rgb.turnGreen_on()
             sleep(0.5)
