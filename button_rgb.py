@@ -11,11 +11,11 @@ try:
     while True:
         if button.pressed:
             rgb.turnRed_on()
-            sleep(0.1)
+            sleep(0.5)
             rgb.turnGreen_on()
-            sleep(0.1)
+            sleep(0.5)
             rgb.turnBlue_on()
-            sleep(0.1)
+            sleep(0.5)
             rgb.turnRGB_off()
             button.pressed = False
         
