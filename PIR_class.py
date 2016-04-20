@@ -7,5 +7,5 @@ class PIR:
         self.__setup_pir()
         
     def __setup_pir(self):
-        self.__board.GPIO.setup(self.pin, self.__board.GPIO.IN)
+        self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN)
         
