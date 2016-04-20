@@ -28,13 +28,7 @@ try:
     while True:
         if button.pressed:
             switch('red')
-            button.pressed = False
-            
-        if button.pressed:
             switch('green')
-            button.pressed = False
-            
-        if button.pressed:
             switch('blue')
             button.pressed = False
         
