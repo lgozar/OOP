@@ -10,8 +10,8 @@ try:
     sleep(0.2)
     print('Ready!')
     while True:
-        pir()
-        print('Motion Detected')
+        if rpi.GPIO.input(17)
+             print('Motion Detected')
         sleep(0.1)
         
 except KeyboardInterrupt:
