@@ -11,7 +11,7 @@ try:
     print('Ready!')
     while True:
         pir()
-            print('Motion Detected')
+        print('Motion Detected')
         sleep(0.1)
         
 except KeyboardInterrupt:
