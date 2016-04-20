@@ -30,6 +30,7 @@ try:
             switch('red')
             switch('green')
             switch('blue')
+        else:
             rgb.turnRGB_off()
             button.pressed = False
         
