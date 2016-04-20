@@ -28,7 +28,15 @@ try:
     while True:
         if button.pressed:
             switch('red')
+            rgb.turnRGB_off()
+            button.pressed = False
+            
+        if button.pressed:
             switch('green')
+            rgb.turnRGB_off()
+            button.pressed = False
+            
+        if button.pressed:
             switch('blue')
             rgb.turnRGB_off()
             button.pressed = False
