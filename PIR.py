@@ -5,8 +5,6 @@ from time import sleep
 rpi = Board()
 pir = PIR(rpi, 17)
 
-rpi.GPIO.setup(pir, rpi.GPIO.IN)
-
 try:
     print('PIR Starting')
     sleep(0.2)
