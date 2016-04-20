@@ -10,7 +10,7 @@ try:
     sleep(0.2)
     print('Ready!')
     while True:
-        if rpi.GPIO.input(17)
+        if pir.pir_pin:
              print('Motion Detected')
         sleep(0.1)
         
