@@ -5,7 +5,7 @@ class PIR:
         self.__board = gpio_object
         self.__pin = pin
         self.__setup_pir()
-        self.__pir_pin = self.__pin
+        self.__pir_pin()
         
     @property
     def pir_pin(self):
