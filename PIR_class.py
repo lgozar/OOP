@@ -6,6 +6,6 @@ class PIR:
         self.__pin = pin
         self.__setup_pir()
         
-    def __setup_pir():
+    def __setup_pir(self):
         self.__board.GPIO.setup(self.pin, self.__board.GPIO.IN)
         
