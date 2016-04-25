@@ -62,14 +62,15 @@ setup_pins()
 try:
     while True:
         c = read_temp()
+        celsius = str(int(c))
+        msg = celsius + ' degress C'
+        print(msg)
         if c < set_temp:
             led_off()
             set_led('red')
-            print(c)
         elif c >= set_temp:
             led_off()
             set_led('green')
-            print(c)
         else:
             print('Error')
         time.sleep(1)
