@@ -61,22 +61,18 @@ setup_pins()
 
 try:
     while True:
-        if button.pressed:
-            set_temp++
-            print(set_temp)
-            
-                c = read_temp()
-                if c < set_temp:
-                    led_off()
-                    set_led('red')
-                    print(c)
-                elif c >= set_temp:
-                    led_off()
-                    set_led('green')
-                    print(c)
-                else:
-                    print('Error')
-                time.sleep(1)
+        c = read_temp()
+        if c < set_temp:
+            led_off()
+            set_led('red')
+            print(c)
+        elif c >= set_temp:
+            led_off()
+            set_led('green')
+            print(c)
+        else:
+            print('Error')
+        time.sleep(1)
 
 except KeyboardInterrupt:
     led_off()
