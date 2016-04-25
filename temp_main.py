@@ -62,7 +62,7 @@ setup_pins()
 try:
     while True:
         c = read_temp()
-        celsius = str(float(c).format(round, 2))
+        celsius = str(float(round(c, 2)))
         msg = celsius + ' degress C'
         print(msg)
         
