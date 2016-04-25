@@ -14,6 +14,7 @@ pins = [16, 20, 21]
 set_temp = 22
 
 def setup_pins():
+    print('Setting up pins')
     for pin in pins:
         GPIO.setup(pin, GPIO.OUT)
 
