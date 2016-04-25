@@ -67,10 +67,6 @@ try:
         msg = celsius + ' degress C'
         print(msg)
         
-        if button.pressed:
-            current = int(set_temp)
-            print(str(current))
-        
         if c < set_temp:
             led_off()
             set_led('red')
