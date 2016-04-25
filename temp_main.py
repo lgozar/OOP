@@ -67,9 +67,8 @@ try:
         msg = celsius + ' degress C'
         print(msg)
         
-        current = int(set_temp)
         if button.pressed:
-            current++
+            current = int(set_temp)
             print(str(current))
         
         if c < set_temp:
