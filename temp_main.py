@@ -62,9 +62,10 @@ setup_pins()
 try:
     while True:
         c = read_temp()
-        celsius = str(int(c))
+        celsius = str(float(c))
         msg = celsius + ' degress C'
         print(msg)
+        
         if c < set_temp:
             led_off()
             set_led('red')
