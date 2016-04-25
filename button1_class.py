@@ -1,7 +1,7 @@
 from board import Board
 from time import sleep
 
-class Button:
+class Button1:
     
     def __init__(self, gpio_object, pin):
         self.__board = gpio_object
