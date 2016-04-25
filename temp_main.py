@@ -58,6 +58,7 @@ def read_temp():
 
 board = Board()
 setup_pins()
+button = Button1(board, 24)
 
 try:
     while True:
@@ -65,6 +66,11 @@ try:
         celsius = str(float(round(c, 2)))
         msg = celsius + ' degress C'
         print(msg)
+        
+        current = int(set_temp)
+        if button.pressed:
+            current++
+            print(str(current))
         
         if c < set_temp:
             led_off()
