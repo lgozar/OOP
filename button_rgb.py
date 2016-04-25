@@ -1,10 +1,10 @@
 from board import Board
 from rgb_class import RGB
-from button_class import Button
+from button1_class import Button1
 from time import sleep
 
 rpi = Board()
-button = Button(rpi, 24)
+button = Button1(rpi, 24)
 rgb = RGB(rpi, 16, 20, 21)
 
 def switch(colour):
