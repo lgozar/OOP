@@ -44,7 +44,7 @@ def set_temp(current):
         print(str(temp))
     elif button2.pressed:
         button1.pressed = False
-        temp -= 1
+        temp - 1
         print(str(temp))
     return temp
 
