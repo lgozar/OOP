@@ -4,7 +4,8 @@ from button_class import Button
 from time import sleep
 
 rpi = Board()
-button = Button(rpi, 24)
+button1 = Button(rpi, 24)
+button2 = Button(rpi, 12)
 rgb = RGB(rpi, 16, 20, 21)
 
 def switch(colour):
@@ -26,11 +27,16 @@ def switch(colour):
 
 try:
     while True:
-        if button.pressed:
+        if button1.pressed:
             switch('red')
             switch('green')
             switch('blue')
             button.pressed = False
+        elif button2.pressed:
+            switch('red')
+            switch('green')
+            switch('blue')
+            button2.pressed = False
         
 except KeyboardInterrupt:
     rgb.turnRGB_off()
