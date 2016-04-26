@@ -37,11 +37,22 @@ button1 = Button(board, 24)
 button2 = Button(board, 12)
 
 try:
+    c = read_temp()
+    celsius = str(float(round(c, 2)))
+    msg = celsius + ' degress C'
+    print(msg)
+    
+    if c < temp:
+            rgb.turnRGB_off()
+            rgb.turnRed_on()
+        elif c >= temp:
+            rgb.turnRGB_off()
+            rgb.turnGreen_on()
+        else:
+            print('Error')
+        time.sleep(1)
+        
     while True:
-        c = read_temp()
-        celsius = str(float(round(c, 2)))
-        msg = celsius + ' degress C'
-        print(msg)
         
         temp = int(set_temp)
         
@@ -51,17 +62,8 @@ try:
         elif button2.pressed:
             button1.pressed = False
             temp - 1
-            return temp
-                
-        if c < temp:
-            rgb.turnRGB_off()
-            rgb.turnRed_on()
-        elif c >= temp:
-            rgb.turnRGB_off()
-            rgb.turnGreen_on()
-        else:
-            print('Error')
-        time.sleep(1)
+            
+    return temp
 
 except KeyboardInterrupt:
     rgb.turnRGB_off()
