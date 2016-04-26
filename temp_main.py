@@ -10,7 +10,7 @@ os.system('modprobe w1-therm')
 
 sensor = '/sys/bus/w1/devices/28-021565382dff/w1_slave'
 
-set_temp = 22
+current = 22
 
 def temp_raw():
     f = open(sensor, 'r')
@@ -36,33 +36,35 @@ rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
 
+def set_temp(current)
+
+    temp = int(current)
+        
+    if button1.pressed:
+        button2.pressed = False
+        temp += 1
+    elif button2.pressed:
+        button1.pressed = False
+        temp -= 1
+    return temp
+
 try:
-    c = read_temp()
-    celsius = str(float(round(c, 2)))
-    msg = celsius + ' degress C'
-    print(msg)
-    
-    if c < new_temp:
-        rgb.turnRGB_off()
-        rgb.turnRed_on()
-    elif c >= new_temp:
-        rgb.turnRGB_off()
-        rgb.turnGreen_on()
-    else:
-        print('Error')
-    time.sleep(1)
-        
     while True:
+        c = read_temp()
+        celsius = str(float(round(c, 2)))
+        msg = celsius + ' degress C'
+        print(msg)
+            
+        if c < temp:
+            rgb.turnRGB_off()
+            rgb.turnRed_on()
+        elif c >= temp:
+            rgb.turnRGB_off()
+            rgb.turnGreen_on()
+        else:
+            print('Error')
+        time.sleep(1)
         
-        temp = int(set_temp)
-        
-        if button1.pressed:
-            button2.pressed = False
-            new_temp = temp += 1
-        elif button2.pressed:
-            button1.pressed = False
-            new_temp = temp -= 1
-        return new_temp
 
 except KeyboardInterrupt:
     rgb.turnRGB_off()
