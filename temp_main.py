@@ -20,7 +20,7 @@ def setup_pins():
         GPIO.setup(pin, GPIO.OUT)
         
 def rgb_off():
-    for pin in outputs:
+    for pin in pinss:
         GPIO.output(pin, GPIO.LOW)
 
 def temp_raw():
