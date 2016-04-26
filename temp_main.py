@@ -42,10 +42,10 @@ try:
     msg = celsius + ' degress C'
     print(msg)
     
-    if c < temp:
+    if c < new_temp:
         rgb.turnRGB_off()
         rgb.turnRed_on()
-    elif c >= temp:
+    elif c >= new_temp:
         rgb.turnRGB_off()
         rgb.turnGreen_on()
     else:
@@ -58,12 +58,11 @@ try:
         
         if button1.pressed:
             button2.pressed = False
-            temp += 1
+            new_temp = temp += 1
         elif button2.pressed:
             button1.pressed = False
-            temp - 1
-            
-    return temp
+            new_temp = temp -= 1
+        return new_temp
 
 except KeyboardInterrupt:
     rgb.turnRGB_off()
