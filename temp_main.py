@@ -68,24 +68,25 @@ try:
         msg = celsius + ' degress C'
         print(msg)
         
-        if button1.pressed:
-            temp = int(set_temp)
-            temp += 1
-            print(str(temp))
-        elif button2.pressed:
-            temp = int(set_temp)
-            temp -= 1
-            print(str(temp))
+        if c < set_temp:
+            led_off()
+            set_led('red')
+        elif c >= set_temp:
+            led_off()
+            set_led('green')
+        else:
+            print('Error')
+        time.sleep(1)
         
-            if c < set_temp:
-                led_off()
-                set_led('red')
-            elif c >= set_temp:
-                led_off()
-                set_led('green')
-            else:
-                print('Error')
-            time.sleep(1)
+        while True:
+            if button1.pressed:
+                temp = int(set_temp)
+                temp += 1
+                print(str(temp))
+            elif button2.pressed:
+                temp = int(set_temp)
+                temp -= 1
+                print(str(temp))
 
 except KeyboardInterrupt:
     led_off()
