@@ -10,8 +10,6 @@ os.system('modprobe w1-therm')
 
 sensor = '/sys/bus/w1/devices/28-021565382dff/w1_slave'
 
-current = 22
-
 def temp_raw():
     f = open(sensor, 'r')
     lines = f.readlines()
@@ -43,9 +41,11 @@ def set_temp(current):
     if button1.pressed:
         button2.pressed = False
         temp += 1
+        print(str(temp))
     elif button2.pressed:
         button1.pressed = False
         temp -= 1
+        print(str(temp))
     return temp
 
 try:
