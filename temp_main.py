@@ -51,8 +51,6 @@ try:
         elif button2.pressed:
             button1.pressed = False
             temp - 1
-        else:
-            print('Error')
         
         if c < set_temp:
             rgb.turnRGB_off()
