@@ -3,6 +3,7 @@ import time
 import RPi.GPIO as GPIO
 from board import Board
 from button_class import Button
+from rgb_class import RGB
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
@@ -17,25 +18,6 @@ def setup_pins():
     print('Setting up pins')
     for pin in pins:
         GPIO.setup(pin, GPIO.OUT)
-
-def set_led(colour):
-    
-    r = 16
-    g = 20
-    b = 21
-    
-    if colour == 'red':
-        GPIO.output(r, GPIO.HIGH)
-    elif colour == 'green':
-        GPIO.output(g, GPIO.HIGH)
-    elif colour == 'blue':
-        GPIO.output(b, GPIO.HIGH)
-    else:
-        print('Error')
-        
-def led_off():
-    for pin in pins:
-        GPIO.output(pin, GPIO.LOW)
 
 def temp_raw():
     f = open(sensor, 'r')
@@ -58,8 +40,18 @@ def read_temp():
 
 board = Board()
 setup_pins()
+rgb = RGB(rpi, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
+
+def set_led(colour):
+    
+    if colour == 'red':
+        rgb.turnRed_on()
+    elif colour == 'green':
+        rgb.turnGreen_on()
+    else:
+        rgb.turnRGB_Off()
 
 try:
     while True:
@@ -69,10 +61,10 @@ try:
         print(msg)
         
         if c < set_temp:
-            led_off()
+            rgb.turnRGB_Off()
             set_led('red')
         elif c >= set_temp:
-            led_off()
+            rgb.turnRGB_Off()
             set_led('green')
         else:
             print('Error')
