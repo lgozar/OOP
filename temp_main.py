@@ -36,15 +36,6 @@ rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
 
-def set_led(colour):
-    
-    if colour == 'red':
-        rgb.turnRed_on()
-    elif colour == 'green':
-        rgb.turnGreen_on()
-    else:
-        rgb.turnRGB_off()
-
 try:
     while True:
         c = read_temp()
@@ -54,10 +45,10 @@ try:
         
         if c < set_temp:
             rgb.turnRGB_off()
-            set_led('red')
+            rgb.turnRed_on()
         elif c >= set_temp:
             rgb.turnRGB_off()
-            set_led('green')
+            rgb.turnGreen_on()
         else:
             print('Error')
         time.sleep(1)
