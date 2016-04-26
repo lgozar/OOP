@@ -62,20 +62,22 @@ button1 = Button(board, 24)
 button2 = Button(board, 12)
 
 try:
+    if button1.pressed:
+        temp = int(set_temp)
+        temp += 1
+        print(str(temp))
+    elif button2.pressed:
+        temp = int(set_temp)
+        temp -= 1
+        print(str(temp))
+    else:
+        print('Error')
+    
     while True:
         c = read_temp()
         celsius = str(float(round(c, 2)))
         msg = celsius + ' degress C'
         print(msg)
-        
-        if button1.pressed:
-            temp = int(set_temp)
-            temp += 1
-            print(str(temp))
-        elif button2.pressed:
-            temp = int(set_temp)
-            temp -= 1
-            print(str(temp))
         
         if c < set_temp:
             led_off()
