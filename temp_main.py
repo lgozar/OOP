@@ -53,10 +53,10 @@ try:
         print(msg)
         
         if c < set_temp:
-            rgb_off()
+            rgb.turnRGB_Off()
             set_led('red')
         elif c >= set_temp:
-            rgb_off()
+            rgb.turnRGB_Off()
             set_led('green')
         else:
             print('Error')
