@@ -63,7 +63,7 @@ try:
         time.sleep(1)
 
 except KeyboardInterrupt:
-    led_off()
+    rgb.turnRGB_off()
     time.sleep(1)
 
 finally:
