@@ -53,6 +53,10 @@ def set_led(colour):
     else:
         rgb.turnRGB_Off()
 
+def rgb_off():
+    for pin in outputs:
+        GPIO.output(pin, GPIO.LOW)
+
 try:
     while True:
         c = read_temp()
@@ -61,10 +65,10 @@ try:
         print(msg)
         
         if c < set_temp:
-            rgb.turnRGB_Off()
+            rgb_off()
             set_led('red')
         elif c >= set_temp:
-            rgb.turnRGB_Off()
+            rgb_off()
             set_led('green')
         else:
             print('Error')
