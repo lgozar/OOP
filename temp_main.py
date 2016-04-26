@@ -18,6 +18,10 @@ def setup_pins():
     print('Setting up pins')
     for pin in pins:
         GPIO.setup(pin, GPIO.OUT)
+        
+def rgb_off():
+    for pin in outputs:
+        GPIO.output(pin, GPIO.LOW)
 
 def temp_raw():
     f = open(sensor, 'r')
@@ -52,10 +56,6 @@ def set_led(colour):
         rgb.turnGreen_on()
     else:
         rgb.turnRGB_Off()
-
-def rgb_off():
-    for pin in outputs:
-        GPIO.output(pin, GPIO.LOW)
 
 try:
     while True:
