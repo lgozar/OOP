@@ -69,10 +69,12 @@ try:
         print(msg)
         
         if button1.pressed:
-            temp = int(set_temp) += 1
+            temp = int(set_temp)
+            temp += 1
             print(str(temp))
         elif button2.pressed:
-            temp = int(set_temp) - 1
+            temp = int(set_temp)
+            temp - 1
             print(str(temp))
         
         if c < set_temp:
