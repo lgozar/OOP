@@ -43,14 +43,14 @@ try:
     print(msg)
     
     if c < temp:
-            rgb.turnRGB_off()
-            rgb.turnRed_on()
-        elif c >= temp:
-            rgb.turnRGB_off()
-            rgb.turnGreen_on()
-        else:
-            print('Error')
-        time.sleep(1)
+        rgb.turnRGB_off()
+        rgb.turnRed_on()
+    elif c >= temp:
+        rgb.turnRGB_off()
+        rgb.turnGreen_on()
+    else:
+        print('Error')
+    time.sleep(1)
         
     while True:
         
