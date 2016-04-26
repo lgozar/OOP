@@ -77,16 +77,6 @@ try:
         else:
             print('Error')
         time.sleep(1)
-        
-        while True:
-            if button1.pressed:
-                temp = int(set_temp)
-                temp += 1
-                print(str(temp))
-            elif button2.pressed:
-                temp = int(set_temp)
-                temp -= 1
-                print(str(temp))
 
 except KeyboardInterrupt:
     led_off()
