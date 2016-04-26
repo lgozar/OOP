@@ -32,7 +32,6 @@ def read_temp():
 '''main code'''
 
 board = Board()
-setup_pins()
 rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
