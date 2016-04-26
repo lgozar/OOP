@@ -58,7 +58,8 @@ def read_temp():
 
 board = Board()
 setup_pins()
-button = Button1(board, 24)
+button1 = Button(board, 24)
+button2 = Button(board, 12)
 
 try:
     while True:
