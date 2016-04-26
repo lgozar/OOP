@@ -31,7 +31,7 @@ try:
             switch('red')
             switch('green')
             switch('blue')
-            button.pressed = False
+            button1.pressed = False
         elif button2.pressed:
             switch('red')
             switch('green')
