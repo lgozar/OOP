@@ -43,6 +43,17 @@ try:
         msg = celsius + ' degress C'
         print(msg)
         
+        temp = int(set_temp)
+        
+        if button1.pressed:
+            button2.pressed = False
+            temp += 1
+        elif button2.pressed:
+            button1.pressed = False
+            temp - 1
+        else:
+            print('Error')
+        
         if c < set_temp:
             rgb.turnRGB_off()
             rgb.turnRed_on()
