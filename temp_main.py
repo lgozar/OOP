@@ -36,7 +36,7 @@ rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
 
-def set_temp(current)
+def set_temp(current):
 
     temp = int(current)
         
