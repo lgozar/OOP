@@ -74,7 +74,7 @@ try:
             print(str(temp))
         elif button2.pressed:
             temp = int(set_temp)
-            temp - 1
+            temp -= 1
             print(str(temp))
         
         if c < set_temp:
