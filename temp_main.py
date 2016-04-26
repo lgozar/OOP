@@ -43,11 +43,7 @@ def set_led(colour):
     elif colour == 'green':
         rgb.turnGreen_on()
     else:
-        rgb.turnRGB_Off()
-        
-def rgb_off():
-    rgb.turnRGB_Off()
-
+        rgb.turnRGB_off()
 
 try:
     while True:
@@ -57,10 +53,10 @@ try:
         print(msg)
         
         if c < set_temp:
-            rgb_off()
+            rgb.turnRGB_off()
             set_led('red')
         elif c >= set_temp:
-            rgb_off()
+            rgb.turnRGB_off()
             set_led('green')
         else:
             print('Error')
