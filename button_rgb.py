@@ -23,7 +23,7 @@ def switch(colour):
         sleep(0.2)
         rgb.turnRGB_off()
     else:
-        rgb.turnRGB_Off()
+        rgb.turnRGB_off()
 
 try:
     while True:
