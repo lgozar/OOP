@@ -2,7 +2,7 @@ import os
 import time
 import RPi.GPIO as GPIO
 from board import Board
-from button1_class import Button1
+from button_class import Button
 
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
