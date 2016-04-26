@@ -40,7 +40,7 @@ def read_temp():
 
 board = Board()
 setup_pins()
-rgb = RGB(rpi, 16, 20, 21)
+rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
 
