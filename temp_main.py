@@ -51,11 +51,12 @@ try:
         elif button2.pressed:
             button1.pressed = False
             temp - 1
+        return temp
         
-        if c < set_temp:
+        if c < temp:
             rgb.turnRGB_off()
             rgb.turnRed_on()
-        elif c >= set_temp:
+        elif c >= temp:
             rgb.turnRGB_off()
             rgb.turnGreen_on()
         else:
