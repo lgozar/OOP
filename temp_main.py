@@ -86,8 +86,6 @@ try:
             else:
                 print('Error')
             time.sleep(1)
-        else:
-            print('Error')    
 
 except KeyboardInterrupt:
     led_off()
