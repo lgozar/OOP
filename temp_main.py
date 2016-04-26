@@ -10,18 +10,7 @@ os.system('modprobe w1-therm')
 
 sensor = '/sys/bus/w1/devices/28-021565382dff/w1_slave'
 
-pins = [16, 20, 21]
-
 set_temp = 22
-
-def setup_pins():
-    print('Setting up pins')
-    for pin in pins:
-        GPIO.setup(pin, GPIO.OUT)
-        
-def rgb_off():
-    for pin in pins:
-        GPIO.output(pin, GPIO.LOW)
 
 def temp_raw():
     f = open(sensor, 'r')
