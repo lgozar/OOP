@@ -36,16 +36,19 @@ button2 = Button(board, 12)
 
 def set_temp(current):
 
-    temp = int(current)
+    temp = current
     
-    for int(value) in temp:
+    for value in temp:
         
         if button1.pressed:
             value += 1
+            return_value = int(value)
             button2.pressed = False
         elif button2.pressed:
             value -= 1
+            return_value = int(value)
             button1.pressed = False
+        return return_value
 
 try:
     
