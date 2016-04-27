@@ -42,12 +42,12 @@ def set_temp(current):
     if button1.pressed:
         print('Button 1 pressed')
         button2.pressed = False
-        temp += num
+        temp += int(num)
         button1.pressed = False
     elif button2.pressed:
         print('Button 2 pressed')
         button1.pressed = False
-        temp -= num
+        temp -= int(num)
         button2.pressed = False
         return value
 
