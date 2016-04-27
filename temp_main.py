@@ -38,18 +38,19 @@ def set_temp(current):
 
     temp = int(current)
     
-    if button1.pressed:
-        button2.pressed = False
-        temp += 1
-        print(str(temp))
-    elif button2.pressed:
-        button1.pressed = False
-        temp - 1
-        print(str(temp))
-    return temp
+    for value in temp:
+        
+        if button1.pressed:
+            value += 1
+            button2.pressed = False
+        elif button2.pressed:
+            value -= 1
+            button1.pressed = False
 
 try:
+    
     current_temp = set_temp(22)
+    
     while True:
         c = read_temp()
         celsius = str(float(round(c, 2)))
