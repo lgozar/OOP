@@ -49,7 +49,7 @@ def set_temp(current):
         button1.pressed = False
         temp -= num
         button2.pressed = False
-        return temp
+    return temp
 
 try:
     
