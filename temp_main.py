@@ -39,7 +39,7 @@ def set_temp(current):
     num = 1
     temp = current
     
-    for value in temp:
+    for value in str(temp):
         
         if button1.pressed:
             button2.pressed = False
@@ -49,7 +49,8 @@ def set_temp(current):
             button1.pressed = False
             temp-= int(num)
             button2.pressed = False
-        return value
+            
+    return temp
 
 try:
     
