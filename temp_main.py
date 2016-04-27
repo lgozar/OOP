@@ -49,13 +49,12 @@ def set_temp(current):
     return temp
 
 try:
+    current_temp = set_temp(22)
     while True:
         c = read_temp()
         celsius = str(float(round(c, 2)))
         msg = celsius + ' degress C'
         print(msg)
-        
-        current_temp = set_temp(22)
             
         if c < current_temp:
             rgb.turnRGB_off()
