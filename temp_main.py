@@ -38,7 +38,7 @@ def set_temp(current):
 
     temp = int(current)
     
-    for value in temp:
+    for int(value) in temp:
         
         if button1.pressed:
             value += 1
