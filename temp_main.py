@@ -52,12 +52,13 @@ try:
             button1.pressed = False
             temp -= num
             button2.pressed = False
-        return temp
     
         c = read_temp()
         celsius = str(float(round(c, 2)))
         msg = celsius + ' degress C'
         print(msg)
+        
+        current_temp = temp
             
         if c < current_temp:
             rgb.turnRGB_off()
