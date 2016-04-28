@@ -34,10 +34,7 @@ rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
 
-current = 22
-
-try:
-    while True:
+def set_temp(current):
         
         num = int(1)
         temp = int(current)
@@ -52,6 +49,12 @@ try:
             button1.pressed = False
             temp -= num
             button2.pressed = False
+        return temp
+
+try:
+    while True:
+        
+        temp = set_temp(22)
     
         c = read_temp()
         celsius = str(float(round(c, 2)))
