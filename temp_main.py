@@ -34,27 +34,29 @@ rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
 
+def set_temp(current):
+            
+    for temp in str(current):
+            
+        input1 = int(temp)
+            
+        if button1.pressed:
+            button2.pressed = False
+            input1 += 1
+            print('Button 1 pressed ' + str(temp))
+            button1.pressed = False
+        elif button2.pressed:
+            button1.pressed = False
+            input1 -= 1
+            print('Button 2 pressed ' + str(temp))
+            button2.pressed = False
+        return input1
+
 try:
     while True:
         
-        current = 22
+        temp = set_temp(22)
         
-        for temp in str(current):
-            
-            input1 = int(temp)
-            
-            if button1.pressed:
-                button2.pressed = False
-                input1 += 1
-                print('Button 1 pressed ' + str(temp))
-                button1.pressed = False
-            elif button2.pressed:
-                button1.pressed = False
-                input1 -= 1
-                print('Button 2 pressed ' + str(temp))
-                button2.pressed = False
-            return str(input1)
-    
         c = read_temp()
         celsius = str(float(round(c, 2)))
         msg = celsius + ' degress C'
