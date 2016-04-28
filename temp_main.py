@@ -36,7 +36,10 @@ button2 = Button(board, 12)
 
 def set_temp(current):
         
-        for temp in current:
+        for temp in str(current):
+            
+            input1 = int(temp)
+            
             if button1.pressed:
                 button2.pressed = False
                 temp += 1
@@ -47,12 +50,12 @@ def set_temp(current):
                 temp -= 1
                 print('Button 2 pressed ' + str(temp))
                 button2.pressed = False
-            return temp
+            return str(temp)
 
 try:
     while True:
         
-        temp = int(set_temp(22))
+        temp = set_temp(22)
     
         c = read_temp()
         celsius = str(float(round(c, 2)))
