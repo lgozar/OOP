@@ -50,13 +50,11 @@ try:
         celsius = str(float(round(c, 2)))
         msg = celsius + ' degress C.'
         print(msg)
-        
-        current_temp = temp
             
-        if c < current_temp:
+        if c < set_temp:
             rgb.turnRGB_off()
             rgb.turnRed_on()
-        elif c >= current_temp:
+        elif c >= set_temp:
             rgb.turnRGB_off()
             rgb.turnGreen_on()
         else:
