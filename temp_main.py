@@ -35,8 +35,10 @@ button1 = Button(board, 24)
 button2 = Button(board, 12)
 
 def set_temp(current):
+    
+    input1 = current
             
-    while input1 == current:
+    while input1 !> 30:
             
         if button1.pressed:
             button2.pressed = False
