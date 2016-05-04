@@ -59,7 +59,7 @@ try:
         
         c = read_temp()
         celsius = str(float(round(c, 2)))
-        msg = celsius + ' degress C'
+        msg = celsius + ' degress C.'
         print(msg)
         
         current_temp = temp
