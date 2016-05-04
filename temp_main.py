@@ -50,7 +50,7 @@ def set_temp(current):
             input1 -= 1
             print('Button 2 pressed ' + str(temp))
             button2.pressed = False
-        return input1
+        return int(input1)
 
 try:
     while True:
