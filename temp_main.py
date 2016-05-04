@@ -36,19 +36,19 @@ button2 = Button(board, 12)
 
 def set_temp(current):
             
-    input1 = int(current)
+    while input1 = int(current)
             
-    if button1.pressed:
-        button2.pressed = False
-        input1 += 1
-        print('Button 1 pressed ' + str(input1))
-        button1.pressed = False
-    elif button2.pressed:
-        button1.pressed = False
-        input1 -= 1
-        print('Button 2 pressed ' + str(input1))
-        button2.pressed = False
-    return input1
+        if button1.pressed:
+            button2.pressed = False
+            input1 += 1
+            print('Button 1 pressed ' + str(input1))
+            button1.pressed = False
+        elif button2.pressed:
+            button1.pressed = False
+            input1 -= 1
+            print('Button 2 pressed ' + str(input1))
+            button2.pressed = False
+        return input1
 
 try:
     while True:
