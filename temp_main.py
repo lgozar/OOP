@@ -38,7 +38,7 @@ def set_temp(current):
     
     input1 = current
             
-    while input1 !> 30:
+    while True:
             
         if button1.pressed:
             button2.pressed = False
