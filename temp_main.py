@@ -33,29 +33,18 @@ board = Board()
 rgb = RGB(board, 16, 20, 21)
 button1 = Button(board, 24)
 button2 = Button(board, 12)
+set_temp = 22
 
-def set_temp(current):
+def temp_up():
+    global set_temp
+    set_temp += 1
     
-    input1 = current
-            
-    while True:
-            
-        if button1.pressed:
-            button2.pressed = False
-            input1 += 1
-            print('Button 1 pressed ' + str(input1))
-            button1.pressed = False
-        elif button2.pressed:
-            button1.pressed = False
-            input1 -= 1
-            print('Button 2 pressed ' + str(input1))
-            button2.pressed = False
-        return input1
+def temp_down():
+    global set_temp
+    set_temp -= 1
 
 try:
     while True:
-        
-        temp = set_temp(22)
         
         c = read_temp()
         celsius = str(float(round(c, 2)))
@@ -73,6 +62,15 @@ try:
         else:
             print('Error')
         time.sleep(1)
+        
+        if button1.pressed:
+            temp_up()
+            print('Button 1 pressed' + str(set_temp))
+            button1.pressed = False
+        if button2.pressed:
+            temp_down()
+            print('Button 2 pressed' + str(set_temp))
+            button2.pressed = False
         
 
 except KeyboardInterrupt:
