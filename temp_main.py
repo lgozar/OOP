@@ -63,11 +63,11 @@ try:
         
         if button1.pressed:
             temp_up()
-            print('Button 1 pressed' + str(set_temp))
+            print('Button 1 pressed ' + str(set_temp))
             button1.pressed = False
         if button2.pressed:
             temp_down()
-            print('Button 2 pressed' + str(set_temp))
+            print('Button 2 pressed. New value ' + str(set_temp))
             button2.pressed = False
         
 
