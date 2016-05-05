@@ -35,11 +35,11 @@ button1 = Button(board, 24)
 button2 = Button(board, 12)
 set_temp = 22
 
-def temp_up():
+def up():
     global set_temp
     set_temp += 1
     
-def temp_down():
+def down():
     global set_temp
     set_temp -= 1
 
@@ -62,11 +62,11 @@ try:
         time.sleep(1)
         
         if button1.pressed:
-            temp_up()
+            up()
             print('Button 1 pressed. New Value ' + str(set_temp))
             button1.pressed = False
         if button2.pressed:
-            temp_down()
+            down()
             print('Button 2 pressed. New value ' + str(set_temp))
             button2.pressed = False
         
