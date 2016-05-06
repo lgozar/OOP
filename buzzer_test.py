@@ -55,5 +55,5 @@ print('Morse Code')
 
 count = input('How many times would you like the SOS to loop?: ')
 while count > 0:
-    count = count - 1
+    count -= 1
     morsecode()
