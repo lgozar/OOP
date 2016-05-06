@@ -53,7 +53,7 @@ def morsecode():
 os.system('clear')
 print('Morse Code')
 
-loop_count = input('How many times would you like the SOS to loop?: ')
-while loop_count > 0:
-    loop_count = loop_count - 1
+count = input('How many times would you like the SOS to loop?: ')
+while count > 0:
+    count = count - 1
     morsecode()
