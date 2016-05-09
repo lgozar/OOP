@@ -1,7 +1,7 @@
 from board import Board
 import time
 
-class MorseCode:
+class Buzzer:
 
     def ___init__(self, gpio_object, pin):
         self.__board = gpio_object
