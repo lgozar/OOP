@@ -37,10 +37,6 @@ class MorseCode:
         time.sleep(0.2)
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
         time.sleep(0.2)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.2)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.2)
     
         '''dot dot dot'''
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
