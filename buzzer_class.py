@@ -7,12 +7,12 @@ class MorseCode:
         self.__board = gpio_object
         self.__pin = pin
         self.__setup()
-        self.__morsecode()
+        self.__main()
         
     def __setup(self):
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.OUT)
         
-    def __morsecode(self):
+    def __main(self):
     
         '''dot dot dot'''
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
