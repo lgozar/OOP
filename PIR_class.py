@@ -21,6 +21,10 @@ class PIR:
                 if self.__board.GPIO.input(self.__pin):
                     print('Motion Detected')
                     sleep(0.1)
+                    
+        except KeyboardInterrupt:
+            print('Stop')
+            stop()
             
     def stop(self):
         self.__board.GPIO.cleanup()
