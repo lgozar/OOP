@@ -1,4 +1,5 @@
 from board import Board
+from time import sleep
 
 class PIR:
     
@@ -11,8 +12,15 @@ class PIR:
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN)
         
     def input_pir(self):
-        if self.__board.GPIO.input(self.__pin):
-            print('Motion Detected')
+        
+        try:
+            print('Starting PIR sensor')
+            sleep(0.2)
+            print('Ready!')
+            while True:
+                if self.__board.GPIO.input(self.__pin):
+                    print('Motion Detected')
+                    sleep(0.1)
             
     def stop(self):
         self.__board.GPIO.cleanup()
