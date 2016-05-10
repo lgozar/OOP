@@ -24,7 +24,7 @@ class PIR:
                     
         except KeyboardInterrupt:
             print('Stop')
-            stop()
+            self.stop()
             
     def stop(self):
         self.__board.GPIO.cleanup()
