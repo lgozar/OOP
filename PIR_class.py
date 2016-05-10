@@ -12,19 +12,8 @@ class PIR:
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN)
         
     def main(self):
-        
-        try:
-            print('Starting PIR sensor')
-            sleep(0.2)
-            print('Ready!')
-            while True:
-                if self.__board.GPIO.input(self.__pin):
-                    print('Motion Detected')
-                    sleep(0.1)
-                    
-        except KeyboardInterrupt:
-            print('Stop')
-            self.stop()
+        if self.__board.GPIO.input(self.__pin):
+            print('Motion Detected')
             
     def stop(self):
         self.__board.GPIO.cleanup()
