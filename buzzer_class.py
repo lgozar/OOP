@@ -11,7 +11,7 @@ class Buzzer:
     def __setup(self):
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.OUT)
         
-    def __SOS(self):
+    def SOS(self):
     
         '''dot dot dot'''
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
@@ -49,7 +49,7 @@ class Buzzer:
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
         time.sleep(0.1)
         
-    def __beep(self):
+    def beep(self):
         
         '''beep'''
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
