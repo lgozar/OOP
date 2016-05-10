@@ -5,3 +5,4 @@ rpi = Board()
 buzz = Buzzer(rpi, 26)
 
 buzz.beep()
+buzz.stop()
