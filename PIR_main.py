@@ -15,4 +15,4 @@ try:
         
 except KeyboardInterrupt:
     print('Quit')
-    rpi.GPIO.cleanup()
+    pir.stop()
