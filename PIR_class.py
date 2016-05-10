@@ -1,3 +1,4 @@
+from board import Board
 
 class PIR:
     
@@ -9,4 +10,8 @@ class PIR:
         
     def __setup_pir(self):
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN)
+        
+    def input_pir(self):
+        if self.__board.GPIO.input(self.__pin):
+            print('Motion Detected')
         
