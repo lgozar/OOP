@@ -11,7 +11,7 @@ class PIR:
     def __setup_pir(self):
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN)
         
-    def input_pir(self):
+    def main(self):
         
         try:
             print('Starting PIR sensor')
