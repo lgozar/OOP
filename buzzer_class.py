@@ -58,6 +58,7 @@ class Buzzer:
         time.sleep(0.1)
         
     def stop(self):
+        
         self.__board.GPIO.cleanup()
         
         
