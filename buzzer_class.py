@@ -3,7 +3,7 @@ import time
 
 class Buzzer:
 
-    def ___init__(self, gpio_object, pin):
+    def __init__(self, gpio_object, pin):
         self.__board = gpio_object
         self.__pin = pin
         self.__setup()
