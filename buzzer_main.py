@@ -4,5 +4,9 @@ from buzzer_class import Buzzer
 rpi = Board()
 buzz = Buzzer(rpi, 11)
 
-buzz.beep()
-buzz.stop()
+count= = input('How many times would you want it to loop?')
+
+while count > 0:
+    count -= 1
+    buzz.beep()
+    buzz.stop()
