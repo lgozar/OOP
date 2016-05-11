@@ -6,7 +6,7 @@ rpi = Board()
 pir = PIR(rpi, 17)
 
 try:
-    print('Starting PIR sensor')
+    print('Starting PIR sensor..')
     sleep(0.2)
     print('Ready!')
     while True:
