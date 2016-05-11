@@ -11,7 +11,6 @@ try:
     print('Ready!')
     while True:
         pir.main()
-        sleep(0.1)
         
 except KeyboardInterrupt:
     print('Stop')
