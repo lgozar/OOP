@@ -1,4 +1,5 @@
-from button_class import Board
+from board import Board
+from button_class import Button
 from buzzer_class import Buzzer
 from time import sleep
 
