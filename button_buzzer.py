@@ -3,10 +3,13 @@ from buzzer_class import Buzzer
 from time import sleep
 
 rpi = Board()
-button = BUtton(rpi, 24)
+button = Button(rpi, 24)
 buzz = Buzzer(rpi, 11)
 
 try:
+    print('Setting up pins..')
+    sleep(0.1)
+    print('Ready!')
     while True:
         if button.pressed:
             buzz.beep()
