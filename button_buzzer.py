@@ -8,10 +8,13 @@ button = Button(rpi, 24)
 buzz = Buzzer(rpi, 11)
 
 try:
+    
     print('Setting up pins..')
     sleep(0.1)
     print('Ready!')
+    
     while True:
+        '''press button to buzz'''
         if button.pressed:
             buzz.beep()
             buzz.stop()
