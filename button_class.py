@@ -19,6 +19,7 @@ class Button:
         
 
     def __button(self):
+        print('Setting up button..')
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN, pull_up_down = self.__board.GPIO.PUD_UP)
             
         self.__board.GPIO.add_event_detect(self.__pin, self.__board.GPIO.FALLING, callback = self.__my_callback, bouncetime = 300)
