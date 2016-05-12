@@ -9,8 +9,6 @@ buzz = Buzzer(rpi, 11)
 
 try:
     
-    print('Setting up pins..')
-    sleep(0.2)
     print('Ready!')
     
     while True:
