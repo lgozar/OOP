@@ -9,6 +9,7 @@ class Buzzer:
         self.__setup()
         
     def __setup(self):
+        print('Setting up buzzer..')
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.OUT)
         
     def beep(self):
