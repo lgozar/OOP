@@ -10,6 +10,8 @@ buzz = Buzzer(rpi, 11)
 try:
     
     print('Ready!')
+    sleep(0.2)
+    print('Press button to buzz')
     
     while True:
         '''press button to buzz'''
