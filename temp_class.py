@@ -21,7 +21,7 @@ class Temperature:
         f.close()
         return lines
         
-    def __read_temp(self):
+    def read_temp(self):
         lines = self.__temp_raw()
         while lines[0].strip()[-3:] != 'YES':
             time.sleep(0.2)
