@@ -11,3 +11,7 @@ class Board:
         #setting the mode
         self.GPIO.setmode(self.GPIO.BCM)
         self.GPIO.setwarnings(False)
+        
+    def clean_up(self):
+        #turns off the pins
+        self.GPIO.cleanup()
