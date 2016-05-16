@@ -1,5 +1,5 @@
-import RPi.GPIO as GPIO
 from board import Board
+from time import sleep
 from temp_class import Temperature
 from button_class import Button
 from rgb_class import RGB
@@ -37,7 +37,7 @@ try:
             rgb.turnGreen_on()
         else:
             print('Error')
-        time.sleep(1)
+        sleep(1)
         
         if button1.pressed:
             up()
@@ -51,7 +51,7 @@ try:
 
 except KeyboardInterrupt:
     rgb.turnRGB_off()
-    time.sleep(1)
+    sleep(1)
 
 finally:
-    GPIO.cleanup()
+    board.GPIO.cleanup()
