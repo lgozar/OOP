@@ -13,7 +13,7 @@ class Temperature:
       
     @property
     def c(self):
-        return self.read_temp()[0]
+        return self.__read_temp()[0]
         
     def __temp_raw(self):
         f = open(sensor, 'r')
@@ -21,7 +21,7 @@ class Temperature:
         f.close()
         return lines
         
-    def read_temp(self):
+    def __read_temp(self):
         lines = self.__temp_raw()
         while lines[0].strip()[-3:] != 'YES':
             time.sleep(0.2)
