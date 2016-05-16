@@ -54,4 +54,4 @@ except KeyboardInterrupt:
     sleep(1)
 
 finally:
-    board.GPIO.cleanup()
+    board.cleanup()
