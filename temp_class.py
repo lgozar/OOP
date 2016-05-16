@@ -28,7 +28,7 @@ class Temperature:
             lines = self.__temp_raw()
         output = lines[1].find('t=')
         if output != -1:
-            string = lines[1].strip()[output+2:]
+            string = lines[1][output+2:]
             c = float(string) / 1000.0
             return c
             
