@@ -13,7 +13,7 @@ class Temperature:
       
     @property
     def c(self):
-        return self.__read_temp()[0]
+        return self.read_temp()[0]
         
     def __temp_raw(self):
         f = open(sensor, 'r')
