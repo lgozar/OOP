@@ -54,4 +54,4 @@ except KeyboardInterrupt:
     sleep(1)
 
 finally:
-    board.cleanup()
+    board.clean_up()
