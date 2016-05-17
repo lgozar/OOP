@@ -55,7 +55,14 @@ try:
 
 except KeyboardInterrupt:
     rgb.turnRGB_off()
+    print('Exiting..')
     sleep(1)
 
 finally:
+    lcd.lcd_string("Cleaning up GPIO", lcd.LCD_LINE_1)
+    lcd.lcd_string("", lcd.LCD_LINE_2)
+    print('Cleaning up GPIO')
+    sleep(2)
+    lcd.lcd_clear()
     board.clean_up()
+    sleep(1)
