@@ -32,10 +32,8 @@ def down():
 try:
     while True:
         
-        c = temp.read_temp()
-        celsius = str(float(round(c, 2)))
-        msg = celsius + ' degress C.'
-        print(msg)
+        lcd.lcd_string("Temperature is",lcd.LCD_LINE_1)
+        lcd.lcd_string(str(int(temp.c)) + ' degrees C',lcd.LCD_LINE_2)
             
         if temp.c < set_temp:
             rgb.turnRGB_off()
@@ -49,11 +47,9 @@ try:
         
         if button1.pressed:
             up()
-            print('Button 1 pressed. New Value ' + str(set_temp))
             button1.pressed = False
         if button2.pressed:
             down()
-            print('Button 2 pressed. New value ' + str(set_temp))
             button2.pressed = False
         
 
