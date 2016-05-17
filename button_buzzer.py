@@ -18,11 +18,9 @@ try:
         '''press button to buzz'''
         if button1.pressed:
             buzz.beep()
-            buzz.stop()
             button1.pressed = False
         if button2.pressed:
             buzz.beep()
-            buzz.stop()
             button2.pressed = False
             
 except KeyboardInterrupt:
