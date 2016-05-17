@@ -121,8 +121,8 @@ class LCD:
 
     def setup(self):
       # Main program block
-        self.__board.GPIO.setwarnings(False)
-        self.__board.GPIO.setmode(GPIO.BCM)       # Use BCM GPIO numbers
+        #self.__board.GPIO.setwarnings(False)
+        #self.__board.GPIO.setmode(GPIO.BCM)       # Use BCM GPIO numbers
         self.__board.GPIO.setup(self.LCD_E, GPIO.OUT)  # E
         self.__board.GPIO.setup(self.LCD_RS, GPIO.OUT) # RS
         self.__board.GPIO.setup(self.LCD_D4, GPIO.OUT) # DB4
