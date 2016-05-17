@@ -1,6 +1,6 @@
 
 from subprocess import *
-from lcd1602 import LCD1602
+from lcd_class import LCD
 from time import sleep
 import socket
 import fcntl
@@ -26,7 +26,7 @@ elif ver == 3:
     ip = 'Use Python V2'
 print('DEBUG: IP Address is ' + str(ip))
 
-lcd = LCD1602()
+lcd = LCD()
 
 lcd.lcd_string("IP address", lcd.LCD_LINE_1)
 lcd.lcd_string(ip, lcd.LCD_LINE_2)
