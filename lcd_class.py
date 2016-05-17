@@ -123,12 +123,12 @@ class LCD:
       # Main program block
         #self.__board.GPIO.setwarnings(False)
         #self.__board.GPIO.setmode(GPIO.BCM)       # Use BCM GPIO numbers
-        self.__board.GPIO.setup(self.LCD_E, GPIO.OUT)  # E
-        self.__board.GPIO.setup(self.LCD_RS, GPIO.OUT) # RS
-        self.__board.GPIO.setup(self.LCD_D4, GPIO.OUT) # DB4
-        self.__board.GPIO.setup(self.LCD_D5, GPIO.OUT) # DB5
-        self.__board.GPIO.setup(self.LCD_D6, GPIO.OUT) # DB6
-        self.__board.GPIO.setup(self.LCD_D7, GPIO.OUT) # DB7
+        self.__board.GPIO.setup(self.LCD_E, self.__board.GPIO.OUT)  # E
+        self.__board.GPIO.setup(self.LCD_RS, self.__board.GPIO.OUT) # RS
+        self.__board.GPIO.setup(self.LCD_D4, self.__board.GPIO.OUT) # DB4
+        self.__board.GPIO.setup(self.LCD_D5, self.__board.GPIO.OUT) # DB5
+        self.__board.GPIO.setup(self.LCD_D6, self.__board.GPIO.OUT) # DB6
+        self.__board.GPIO.setup(self.LCD_D7, self.__board.GPIO.OUT) # DB7
 
       # Initialise display
         self.lcd_init()
