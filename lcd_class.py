@@ -13,7 +13,7 @@ class LCD:
         self.LCD_D4 = 26
         self.LCD_D5 = 19
         self.LCD_D6 = 13
-        self.LCD_D7 = 06
+        self.LCD_D7 = 6
 
         # Define some device constants
         self.LCD_WIDTH = 16    # Maximum characters per line
