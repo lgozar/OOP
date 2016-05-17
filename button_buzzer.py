@@ -4,7 +4,8 @@ from buzzer_class import Buzzer
 from time import sleep
 
 rpi = Board()
-button = Button(rpi, 24)
+button1 = Button(rpi, 24)
+button2 = Button(rpi, 12)
 buzz = Buzzer(rpi, 11)
 
 try:
@@ -15,10 +16,14 @@ try:
     
     while True:
         '''press button to buzz'''
-        if button.pressed:
+        if button1.pressed:
             buzz.beep()
             buzz.stop()
-            button.pressed = False
+            button1.pressed = False
+        if button2.pressed:
+            buzz.beep()
+            buzz.stop()
+            button2.pressed = False
             
 except KeyboardInterrupt:
     buzz.stop()
