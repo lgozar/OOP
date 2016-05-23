@@ -33,9 +33,9 @@ try:
             switch('blue')
             button1.pressed = False
         if button2.pressed: #iff button 2 is pressed, rgb turns on
-            switch('red')
             switch('green')
             switch('blue')
+            switch('red')
             button2.pressed = False
         
 except KeyboardInterrupt:
