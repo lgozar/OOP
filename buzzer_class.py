@@ -19,43 +19,6 @@ class Buzzer:
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
         time.sleep(0.1)
         
-    def SOS(self):
-        '''dot dot dot'''
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.1)
-
-        '''dash dash dash'''
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.2)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.2)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.2)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.2)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.2)
-    
-        '''dot dot dot'''
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
-        time.sleep(0.1)
-        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
-        time.sleep(0.1)
-        
     def stop(self):
         self.__board.GPIO.cleanup()
         
