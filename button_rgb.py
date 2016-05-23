@@ -30,7 +30,8 @@ try:
         if button1.pressed: #if button1 is pressed, rgb turns on
             switch('red')
             switch('red')
-            switch('red')switch('red')
+            switch('red')
+            switch('red')
             button1.pressed = False
         if button2.pressed: #iff button 2 is pressed, rgb turns on
             switch('green')
