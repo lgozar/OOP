@@ -2,6 +2,7 @@
 from subprocess import *
 from lcd_class import LCD
 from time import sleep
+from board import Board
 import socket
 import fcntl
 import struct
@@ -26,7 +27,8 @@ elif ver == 3:
     ip = 'Use Python V2'
 print('DEBUG: IP Address is ' + str(ip))
 
-lcd = LCD()
+board = Board()
+lcd = LCD(board)
 
 lcd.lcd_string("IP address", lcd.LCD_LINE_1)
 lcd.lcd_string(ip, lcd.LCD_LINE_2)
