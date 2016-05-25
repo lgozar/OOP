@@ -20,7 +20,7 @@ try:
             buzz.beep()
             button1.pressed = False #set button1 to False after press
         if button2.pressed: #if button2 is pressed the buzzer buzz aswell
-            buzz.beep()
+            buzz.long_beep()
             button2.pressed = False #set button2 to False after press
             
 except KeyboardInterrupt:
