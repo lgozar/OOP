@@ -12,7 +12,8 @@ class PIR:
         self.__board.GPIO.setup(self.__pin, self.__board.GPIO.IN)
         
     def main(self):
-        self.__board.GPIO.input(self.__pin):
+        if self.__board.GPIO.input(self.__pin):
+            print('Motion Detected')
             
     def stop(self):
         self.__board.GPIO.cleanup()
