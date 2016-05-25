@@ -18,6 +18,17 @@ class Buzzer:
         time.sleep(0.1)
         self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
         time.sleep(0.1)
+    
+    def double_beep(self):
+        '''double beep'''
+        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
+        time.sleep(0.1)
+        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
+        time.sleep(0.1)
+        self.__board.GPIO.output(self.__pin, self.__board.GPIO.HIGH)
+        time.sleep(0.1)
+        self.__board.GPIO.output(self.__pin, self.__board.GPIO.LOW)
+        time.sleep(0.1)
         
     def long_beep(self):
         '''long beep'''
