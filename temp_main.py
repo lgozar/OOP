@@ -39,8 +39,8 @@ try:
             
         if temp.c < set_temp: #if temp.c is less than set_temp - turns red light on
             rgb.turnRGB_off() #turns rgb off
-            buzz.beep() # beeps when the temperature drops below the set_temp
             rgb.turnRed_on() #turns red light on
+            buzz.beep() # beeps when the temperature drops below the set_temp
         elif temp.c >= set_temp: #if temp.c is greater than or equal to set_temp - turns green light on
             rgb.turnRGB_off() #turns rgb off
             rgb.turnGreen_on() #turns green light on
