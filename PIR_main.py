@@ -11,7 +11,7 @@ try:
     sleep(0.2)
     print('Ready!')
     while True:
-        pir.main(): #runs the main property from the PIR class
+        pir.main() #runs the main property from the PIR class
         sleep(0.1)
         
 except KeyboardInterrupt:
