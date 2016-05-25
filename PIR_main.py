@@ -1,5 +1,4 @@
 from board import Board #import Board class 
-from lcd_class import LCD
 from PIR_class import PIR #import PIR class
 from time import sleep
 
@@ -12,8 +11,7 @@ try:
     sleep(0.2)
     print('Ready!')
     while True:
-        if pir.main(): #runs the main property from the PIR class
-            lcd.lcd_string("Motion Detected", lcd.LCD_LINE_1) #shows text to LCD
+        pir.main(): #runs the main property from the PIR class
         sleep(0.1)
         
 except KeyboardInterrupt:
