@@ -14,7 +14,7 @@ temp = Temperature() #implement Temperature class to variable temp
 rgb = RGB(board, 16, 20, 21) #implement RGB class to variable rgb with pins 16 20 21
 button1 = Button(board, 24) #implement Button class to variable button1 with pin 24
 button2 = Button(board, 12) #implement Button class to variable button2 with pin 12
-buzz = Buzzer(rpi, 11)
+buzz = Buzzer(board, 11)
 set_temp = 22
 
 def up(): #this adds +1 value to the variable set_temp
