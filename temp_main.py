@@ -1,6 +1,7 @@
 from board import Board #import the board class
 from time import sleep 
 from lcd_class import LCD #import the LCD class
+from buzzer_class import Buzzer #import the Buzzer class
 from temp_class import Temperature #import the temperature class
 from button_class import Button #import the button class
 from rgb_class import RGB #import the rgb class
