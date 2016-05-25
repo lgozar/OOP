@@ -1,8 +1,10 @@
 from board import Board #import Board class 
+from lcd_class import LCD
 from PIR_class import PIR #import PIR class
 from time import sleep
 
 rpi = Board() #implement Board class to variable rpi
+lcd = LCD(rpi)
 pir = PIR(rpi, 17) #implement PIR class to variable pir with pin 17
 
 try:
