@@ -13,7 +13,7 @@ try:
     print('Ready!')
     while True:
         if pir.main(): #runs the main property from the PIR class
-        lcd.lcd_string("Motion Detected", lcd.LCD_LINE_1) #shows text to LCD
+            lcd.lcd_string("Motion Detected", lcd.LCD_LINE_1) #shows text to LCD
         sleep(0.1)
         
 except KeyboardInterrupt:
