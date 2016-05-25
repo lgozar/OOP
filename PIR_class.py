@@ -13,7 +13,6 @@ class PIR:
         
     def main(self):
         if self.__board.GPIO.input(self.__pin):
-            print('Motion Detected')
             
     def stop(self):
         self.__board.GPIO.cleanup()
