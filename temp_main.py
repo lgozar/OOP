@@ -14,6 +14,7 @@ temp = Temperature() #implement Temperature class to variable temp
 rgb = RGB(board, 16, 20, 21) #implement RGB class to variable rgb with pins 16 20 21
 button1 = Button(board, 24) #implement Button class to variable button1 with pin 24
 button2 = Button(board, 12) #implement Button class to variable button2 with pin 12
+buzz = Buzzer(rpi, 11)
 set_temp = 22
 
 def up(): #this adds +1 value to the variable set_temp
@@ -38,6 +39,7 @@ try:
             
         if temp.c < set_temp: #if temp.c is less than set_temp - turns red light on
             rgb.turnRGB_off() #turns rgb off
+            buzz.beep() # beeps when the temperature drops below the set_temp
             rgb.turnRed_on() #turns red light on
         elif temp.c >= set_temp: #if temp.c is greater than or equal to set_temp - turns green light on
             rgb.turnRGB_off() #turns rgb off
