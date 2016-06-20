@@ -34,6 +34,7 @@ def down(): #this subtracts -1 value to the variable set_temp
 try:
     while True:
         
+        #on-screen help - LCD screen 
         lcd.lcd_string("Temperature is",lcd.LCD_LINE_1) #shows text to LCD
         lcd.lcd_string(str(int(temp.c)) + ' degrees C',lcd.LCD_LINE_2)
             
